@@ -13,5 +13,13 @@ fn main() -> Result<(), Error> {
         );
     ")?;
 
+    client.batch_execute("
+    CREATE TABLE IF NOT EXISTS book(
+        id      SERIAL PRIMARY KEY,
+        title    VARCHAR NOT NULL,
+        author_id INTEGER NOT NULL REFERENCES author
+        );
+    ")?;
+
     Ok(())
 }
