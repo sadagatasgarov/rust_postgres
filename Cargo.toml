@@ -1,0 +1,7 @@
+[package]
+name = "rust_and_postgres"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+postgres = "*"
